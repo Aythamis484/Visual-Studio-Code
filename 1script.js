@@ -20,7 +20,7 @@ const tablaDatos = document.getElementById('tablaDatos').getElementsByTagName('t
 
 // Función para enviar los datos al webhook
 function enviarDatosWebhook(data) {
-    fetch('https://webhook.site/#!/view/22b88f77-1999-4283-af32-d7fee8b6712b/02226d98-9066-4c8e-9cf2-cb35d50ebe36/1', {
+    fetch('https://webhook.site/22b88f77-1999-4283-af32-d7fee8b6712b', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
