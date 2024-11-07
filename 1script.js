@@ -1,39 +1,43 @@
-// script.js
+document.getElementById('formulario').addEventListener('submit', function(event) {
+    event.preventDefault(); // Evitar la recarga de la página
 
-// Función para actualizar la fecha y hora
-function actualizarFechaHora() {
-    // Obtener la fecha y hora en formato local directamente
-    document.getElementById('fecha-hora').textContent = `Fecha y hora actual: ${new Date().toLocaleString('es-ES')}`;
-}
+    // Obtener los datos del formulario
+    var nombre = document.getElementById('nombre').value;
+    var equipo = document.getElementById('equipo').value;
+    var edad = document.getElementById('edad').value;
+    var posicion = document.getElementById('posicion').value;
+    var nombreApellidos = document.getElementById('nombre-apellidos').value; // El campo oculto
 
-// Llamar a la función para actualizar la fecha y hora al cargar la página
-actualizarFechaHora();
+    // Crear un objeto con los datos del formulario
+    var datosFormulario = {
+        nombre: nombre,
+        equipo: equipo,
+        edad: edad,
+        posicion: posicion,
+        'nombre-apellidos': nombreApellidos
+    };
 
-// Actualizar la fecha y hora cada segundo
-setInterval(actualizarFechaHora, 1000);
+    // Enviar los datos al Webhook
+    enviarDatosAlWebhook(datosFormulario);
 
-// script.js
+    // Agregar los datos a la tabla
+    agregarDatosATabla(datosFormulario);
 
-// Seleccionamos el formulario y la tabla
-const form = document.getElementById('formRegistro');
-const tablaDatos = document.getElementById('tablaDatos').getElementsByTagName('tbody')[0];
+    // Limpiar el formulario
+    document.getElementById('formulario').reset();
+});
 
-// Función para enviar los datos al webhook
-function enviarDatosWebhook(data) {
+// Función para enviar los datos al Webhook
+function enviarDatosAlWebhook(datos) {
     fetch('https://webhook.site/22b88f77-1999-4283-af32-d7fee8b6712b', {
         method: 'POST',
         headers: {
-            'Content-Type': 'application/json',
+            'Content-Type': 'application/json'
         },
-        body: JSON.stringify(data)
+        body: JSON.stringify(datos)
     })
-    .then(response => response.json())
-    .then(data => {
-        console.log('Datos enviados:', data);
-    })
-    .catch(error => {
-        console.error('Error al enviar los datos:', error);
-    });
+    .then(response => console.log('Datos enviados al Webhook:', response))
+    .catch(error => console.error('Error al enviar los datos al Webhook:', error));
 }
 
 // Función para agregar los datos a la tabla
@@ -68,34 +72,3 @@ function agregarDatosATabla(datos) {
     // Agregar la fila a la tabla
     tablaCuerpo.appendChild(fila);
 }
-
-// Evento al enviar el formulario
-form.addEventListener('submit', function (event) {
-    event.preventDefault(); // Evitar que el formulario recargue la página
-
-    // Obtener los datos del formulario
-    const nombre = document.getElementById('nombre').value;
-    const equipo = document.getElementById('equipo').value;
-    const edad = document.getElementById('edad').value;
-    const posicion = document.getElementById('posicion').value;
-    const nombreApellidos = document.getElementById('nombre-apellidos').value; // Obtener el valor del campo oculto
-
-    // Crear un objeto con los datos
-    const datosFormulario = {
-        nombre,
-        equipo,
-        edad,
-        posicion,
-        'nombre-apellidos': nombreApellidos  // Incluir el nombre y apellidos en el objeto
-    };
-
-    // Enviar los datos al webhook
-    enviarDatosWebhook(datosFormulario);
-
-    // Agregar los datos a la tabla
-    agregarATabla(datosFormulario);
-
-    // Limpiar el formulario
-    form.reset();
-});
-
