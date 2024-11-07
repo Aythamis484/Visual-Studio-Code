@@ -2,23 +2,26 @@
 
 // Función para actualizar la fecha y hora
 function actualizarFechaHora() {
-    const fechaHora = new Date(); // Obtener la fecha y hora actual
-    const opciones = {
-        weekday: 'long', // Día de la semana
-        year: 'numeric', // Año con 4 dígitos
-        month: 'long', // Mes en formato largo
-        day: 'numeric', // Día del mes
-        hour: '2-digit', // Hora en formato de 2 dígitos
-        minute: '2-digit', // Minuto en formato de 2 dígitos
-        second: '2-digit' // Segundo en formato de 2 dígitos
-    };
+    const fechaHora = new Date();
+    const fechaHoraFormateada = fechaHora.toLocaleString(); // Devuelve la fecha y hora en formato local
+
+    // Actualizamos el contenido del elemento con id 'fecha-hora'
+    document.getElementById('fecha-hora').textContent = `Fecha y hora actual: ${fechaHoraFormateada}`;
+}
+
+// Llamamos a la función para actualizar la fecha y hora al cargar la página
+actualizarFechaHora();
+
+// Actualizamos la fecha y hora cada segundo
+setInterval(actualizarFechaHora, 1000);
+
 
     // Formateamos la fecha y hora con las opciones indicadas
     const fechaHoraFormateada = fechaHora.toLocaleString('es-ES', opciones);
 
     // Mostrar la fecha y hora en el elemento con id "fecha-hora"
     document.getElementById('fecha-hora').textContent = `Fecha y hora actual: ${fechaHoraFormateada}`;
-}
+    
 
 // Llamar a la función para actualizar la fecha y hora cuando se cargue la página
 actualizarFechaHora();
@@ -34,7 +37,7 @@ const tablaDatos = document.getElementById('tablaDatos').getElementsByTagName('t
 
 // Función para enviar los datos al webhook
 function enviarDatosWebhook(data) {
-    fetch('https://webhook.site/#!/view/22b88f77-1999-4283-af32-d7fee8b6712b/3840f95f-4c69-4afa-8e55-0bcc657bc043/1', {
+    fetch('https://webhook.site/22b88f77-1999-4283-af32-d7fee8b6712b', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
