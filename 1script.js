@@ -2,31 +2,14 @@
 
 // Función para actualizar la fecha y hora
 function actualizarFechaHora() {
-    const fechaHora = new Date();
-    const fechaHoraFormateada = fechaHora.toLocaleString(); // Devuelve la fecha y hora en formato local
-
-    // Actualizamos el contenido del elemento con id 'fecha-hora'
-    document.getElementById('fecha-hora').textContent = `Fecha y hora actual: ${fechaHoraFormateada}`;
+    // Obtener la fecha y hora en formato local directamente
+    document.getElementById('fecha-hora').textContent = `Fecha y hora actual: ${new Date().toLocaleString('es-ES')}`;
 }
 
-// Llamamos a la función para actualizar la fecha y hora al cargar la página
+// Llamar a la función para actualizar la fecha y hora al cargar la página
 actualizarFechaHora();
 
-// Actualizamos la fecha y hora cada segundo
-setInterval(actualizarFechaHora, 1000);
-
-
-    // Formateamos la fecha y hora con las opciones indicadas
-    const fechaHoraFormateada = fechaHora.toLocaleString('es-ES', opciones);
-
-    // Mostrar la fecha y hora en el elemento con id "fecha-hora"
-    document.getElementById('fecha-hora').textContent = `Fecha y hora actual: ${fechaHoraFormateada}`;
-    
-
-// Llamar a la función para actualizar la fecha y hora cuando se cargue la página
-actualizarFechaHora();
-
-// Actualizar la fecha y hora cada segundo (1000 milisegundos)
+// Actualizar la fecha y hora cada segundo
 setInterval(actualizarFechaHora, 1000);
 
 // script.js
