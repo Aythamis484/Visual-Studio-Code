@@ -54,17 +54,36 @@ function enviarDatosWebhook(data) {
 }
 
 // Función para agregar los datos a la tabla
-function agregarATabla(data) {
-    const nuevaFila = tablaDatos.insertRow();
-    const celdaNombre = nuevaFila.insertCell(0);
-    const celdaEquipo = nuevaFila.insertCell(1);
-    const celdaEdad = nuevaFila.insertCell(2);
-    const celdaPosicion = nuevaFila.insertCell(3);
+function agregarDatosATabla(datos) {
+    // Obtener el cuerpo de la tabla donde se agregarán las filas
+    var tablaCuerpo = document.getElementById('tablaDatos').getElementsByTagName('tbody')[0];
 
-    celdaNombre.textContent = data.nombre;
-    celdaEquipo.textContent = data.equipo;
-    celdaEdad.textContent = data.edad;
-    celdaPosicion.textContent = data.posicion;
+    // Crear una nueva fila
+    var fila = document.createElement('tr');
+
+    // Crear las celdas para cada dato
+    var celdaNombre = document.createElement('td');
+    var celdaEquipo = document.createElement('td');
+    var celdaEdad = document.createElement('td');
+    var celdaPosicion = document.createElement('td');
+    var celdaNombreApellidos = document.createElement('td');
+
+    // Asignar los valores de los datos a las celdas
+    celdaNombre.textContent = datos.nombre;
+    celdaEquipo.textContent = datos.equipo;
+    celdaEdad.textContent = datos.edad;
+    celdaPosicion.textContent = datos.posicion;
+    celdaNombreApellidos.textContent = datos['nombre-apellidos'];
+
+    // Añadir las celdas a la fila
+    fila.appendChild(celdaNombre);
+    fila.appendChild(celdaEquipo);
+    fila.appendChild(celdaEdad);
+    fila.appendChild(celdaPosicion);
+    fila.appendChild(celdaNombreApellidos);
+
+    // Agregar la fila a la tabla
+    tablaCuerpo.appendChild(fila);
 }
 
 // Evento al enviar el formulario
@@ -76,13 +95,15 @@ form.addEventListener('submit', function (event) {
     const equipo = document.getElementById('equipo').value;
     const edad = document.getElementById('edad').value;
     const posicion = document.getElementById('posicion').value;
+    const nombreApellidos = document.getElementById('nombre-apellidos').value; // Obtener el valor del campo oculto
 
     // Crear un objeto con los datos
     const datosFormulario = {
         nombre,
         equipo,
         edad,
-        posicion
+        posicion,
+        'nombre-apellidos': nombreApellidos  // Incluir el nombre y apellidos en el objeto
     };
 
     // Enviar los datos al webhook
