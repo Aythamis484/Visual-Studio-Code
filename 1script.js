@@ -29,7 +29,7 @@ document.getElementById('formulario').addEventListener('submit', function(event)
 
 // Función para enviar los datos al Webhook
 function enviarDatosAlWebhook(datos) {
-    fetch('https://webhook.site/7d580ff9-65b4-42eb-b1e2-c67d9a7a1667', {
+    fetch('https://webhook.site/22b88f77-1999-4283-af32-d7fee8b6712b', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
