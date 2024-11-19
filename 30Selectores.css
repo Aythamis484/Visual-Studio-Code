@@ -1,0 +1,38 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: orange;
+}
+
+p {
+    color: red;
+    background-color: rgb(185, 172, 223);
+}
+
+h1, h2 {
+    color: yellow;
+}
+
+h2 {
+    background-color: aquamarine;
+}
+
+p span {
+    color: blue;
+}
+
+.colorFondoGris {
+    color: white;
+    background-color: grey;
+}
+
+.tamañoGrande {
+    font-size: 2em;
+}
+
+#destacado {
+    text-decoration: underline;
+}
