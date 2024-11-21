@@ -4,9 +4,30 @@
 }
 #outer{
     border: 1px solid red; /*rojo*/
+    margin: 5em;
+    height: 4em;
+    position: relative;
 }
 
 
 #inner{
-    
+    border: 1px solid black; /*negro*/
+    background-color: #999999;
+    width: 6em;
+    height: 4em;
+    text-align: center;
+    line-height: 4em;
+    position: absolute;
+    left: 10em;
+}
+
+#inner2{
+    border: 1px solid black; /*negro*/
+    background-color: #bde783;
+    width: 6em;
+    height: 4em;
+    text-align: center;
+    line-height: 4em;
+    position: absolute;
+    left: 16em;
 }
