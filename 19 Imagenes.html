@@ -1,22 +1,51 @@
-<!DOCTYPE html>
-<html lang="es-ES">
-
+<html lang="es" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Imágenes en HTML</title>
+    <title>Mi página de gatitos</title>
+    <link rel="stylesheet" href="19 Imagenes.css">
   </head>
-
   <body>
+    <div>                                            <!--Añadimos dos div para separar las imágenes-->
+        <img class="grande" src="gato3.jpg" alt="gatitos"> <!-- original 1200*675-->
+    </div>
+    <div>
+        <img class="pequeña" src="gato2.jpg" alt="gatitos">    <!--600*360-- original-->
+    </div>
 
-    <!--Etiqueta <img> sin etiqueta de cierre (vacía)
-    atributo src para indicar el archivo de la foto 
-    ruta url, debe estar en la misma carpeta del html-->
-    <img src="playa.jpg">
+<!--Galería de imágenes-->
 
-    <!--Añadimos atributo alt para describir la imagen y
-    atributo style para para definir tamaño (width: ancho y height: alto)-->
+  <div class="gallery">
+    <a target="_blank" href="perro1.jpg">
+      <img src="perro1.jpg" alt="perros en cesta" width="600" height="400">
+    </a>
+    <div class="desc">Monísimos mis perritos</div>
+  </div>
+  
+  <div class="gallery">
+    <a target="_blank" href="perro2.jpg">
+      <img src="perro2.jpg" alt="cachorro" width="600" height="400">
+    </a>
+    <div class="desc">El cachorro</div>
+  </div>
+  
+  <div class="gallery">
+    <a target="_blank" href="perro3.jpg">
+      <img src="perro3.jpg" alt="perro vecino" width="600" height="400">
+    </a>
+    <div class="desc">El perro de mi vecina</div>
+  </div>
+  
+  <div class="gallery">
+    <a target="_blank" href="perro4.jpg">
+      <img src="perro4.jpg" alt="perros explorando" width="600" height="400">
+    </a>
+    <div class="desc">Salimos a explorar</div>
 
 
-    <img alt="playa" src="playa.jpg" style="width: 50%; height: 50%;"/>
+</div>
+
+
+
+
   </body>
 </html>
