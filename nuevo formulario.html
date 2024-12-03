@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Formularios con botones de envío</title>
+  </head>
+
+  <body>
+    <form  action="	https://webhook.site/31b97d0b-c927-423b-8407-b4f02315322e" method="POST">
+
+      <p style="font-weight: bold;">Ejemplo de botón de opciones: </p>
+
+      <label>
+        <input type="hidden" name="NombreyApellidos" value="Marta Porta">
+      </label>
+      <p>Selecciona un producto:</p>
+
+      <!--La etiqueta label define la etiqueta descriptiva para input-->
+
+      <label>                                      
+        <input type="radio"  name="producto1" value="aguacate"> <!--Input tipo radio para opciones. Se elige solo uno-->
+        El aguacate de la Axarquía  
+      </label> 
+      <br/>
+
+      <label>
+        <input type="radio" name="producto1" value="plátano"> 
+        El plátano de Canarias
+      </label>
+      <br/>
+
+      <label>
+        <input type="radio" name="producto1" value="chirimolla">
+        La chirimolla de Motril
+      </label>
+      <br/>
+
+      <label>
+        <input type="radio" name="producto1" value="longan">
+        El longan del Sur de China
+      </label>    
+      <br/>
+    
+
+      <p style="font-weight: bold;">Control de selección y verificación: </p>
+      <p>Selecciona tu producto favorito</p>
+      
+      <label>
+        <input type="checkbox" name="producto2" value="aguacate"> <!--Input tipo checkbox para casilla de verificación-->
+        El aguacate
+      </label>
+      <br/>
+
+      <label>
+        <input type="checkbox" name="producto2" value="platano">
+        El plátano
+      </label>
+      <br/>
+
+      <label>
+        <input type="checkbox" name="producto2" value="chirimolla">
+        La chirimolla
+      </label>
+      <br/>
+
+      <label>
+        <input type="checkbox" name="producto2" value="longan">
+        El longan
+      </label>
+      <br/>
+    
+      <p style="font-weight: bold;">Ejemplo de listas de selección: </p>
+      <p>Escoge la fruta que más te guste:</p>
+
+      <label>
+        Frutas:
+      
+        <select name="Producto3">               <!--La etiqueta select crea un menú desplegable-->               
+          <option value="aguacate">Aguacate</option>
+          <option value="platano">Plátano</option>
+          <option value="chirimolla">Chirimolla</option>
+          <option value="longan">Longan</option>
+        </select>
+
+      </label>
+      <br/>
+      <br/>
+      <!--Etiqueta fieldset para agrupar elementos en un formulario-->
+      <fieldset>
+        <label>
+          Enviar formulario
+          <input type="submit" name="Enviar datos" value="Enviar"> <!--Input tipo submit para enviar los datosenvío-->
+        </label>
+        <br/><br/>
+        <label>
+          Eliminar los datos
+          <input type="reset" name="Borrar datos" value="Borrar"> <!--Input tipo reset para eliminar la selección-->
+        </label>
+        
+      </fieldset>
+      
+    </form>
+         
+       
+    </form>
+  </body>
+</html>

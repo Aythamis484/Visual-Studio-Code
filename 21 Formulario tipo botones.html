@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Formularios con selección múltiple</title>
+  </head>
+
+  <body>
+
+    <form>
+
+      <p style="font-weight: bold;">Ejemplo de botón de opciones: </p>
+      <p>Selecciona un producto:</p>
+
+      <!--La etiqueta label define la etiqueta descriptiva para input-->
+
+      <label>                                      
+        <input type="radio"  name="producto" value="aguacate"> <!--Input tipo radio para opciones. Se elige solo uno-->
+        El aguacate de la Axarquía  
+      </label> 
+      <br/>
+
+      <label>
+        <input type="radio" name="producto" value="plátano"> 
+        El plátano de Canarias
+      </label>
+      <br/>
+
+      <label>
+        <input type="radio" name="producto" value="chirimolla">
+        La chirimolla de Motril
+      </label>
+      <br/>
+
+      <label>
+        <input type="radio" name="producto" value="longan">
+        El longan del Sur de China
+      </label>    
+      <br/>
+    
+
+      <p style="font-weight: bold;">Control de selección y verificación: </p>
+      <p>Selecciona tu producto favorito</p>
+      
+      <label>
+        <input type="checkbox" name="producto" value="aguacate"> <!--Input tipo checkbox para casilla de verificación-->
+        El aguacate
+      </label>
+      <br/>
+
+      <label>
+        <input type="checkbox" name="producto" value="platano">
+        El plátano
+      </label>
+      <br/>
+
+      <label>
+        <input type="checkbox" name="producto" value="chirimolla">
+        La chirimolla
+      </label>
+      <br/>
+
+      <label>
+        <input type="checkbox" name="producto" value="longan">
+        El longan
+      </label>
+      <br/>
+    
+      <p style="font-weight: bold;">Ejemplo de listas de selección: </p>
+      <p>Escoge la fruta que más te guste:</p>
+
+      <label>
+        Frutas:
+      
+        <select name="Fruta">               <!--La etiqueta select crea un menú desplegable-->               
+          <option name="producto" value="aguacate">Aguacate</option>
+          <option name="producto" value="platano">Plátano</option>
+          <option name="producto" value="chirimolla">Chirimolla</option>
+          <option name="producto" value="longan">Longan</option>
+        </select>
+
+      </label>
+      <br/>
+     
+    </form>
+
+  </body>
+
+</html>

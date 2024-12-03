@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+  <head>
+    <meta charset="utf-8" >    <!--Metadatos del documento, dodificación de caracteres, descripción de la página para buscadores-->
+    <meta name="description" content="Descripción de etiquetas">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="Marta LND">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Responsive, se ve en bien en cualquier dispositivo-->
+
+    <title>Qué hay en la cabecera</title> <!--Título de la página-->
+              
+    <style> /*La etiqueta style define la información del estilo*/
+      body {background-color: powderblue;}
+      h1 {color: red;}
+      p {color: blue;}
+      #demo {color: green;}
+    </style>  
+            
+    <link rel="stylesheet" href="styles.css">  <!--Link vincula las hojas de estilo como recurso externo-->
+    <!-- Resumen de Prioridades
+          Estilos en línea (style en el HTML).
+          Estilos en la etiqueta <style> en el HTML.
+          Estilos en el archivo CSS externo.-->
+
+    <!-- Script JavaScript externo. defer asegura que el script se cargue después de que se cargue la estructura del HTML, mejorando el rendimiento. -->
+    <script src="26 script.js" defer></script>
+  </head> 
+
+
+  <body>
+    <h1>Título de la web</h>
+    <br/>
+    <!-- Botón para mostrar la fecha y hora -->
+    <button id="mostrarFechaHora">Click me to display Date and Time.</button>
+
+    <!-- Elemento donde se mostrará la fecha y hora -->
+    <p id="demo"></p>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut volutpat leo at nisl sagittis molestie. Morbi quis urna felis. In risus elit, finibus vel est et, elementum dapibus urna. Mauris at odio neque. Etiam consequat aliquam tincidunt. Etiam vel commodo elit, dignissim tempus neque. Quisque vehicula, turpis in interdum dapibus, ipsum magna elementum augue, quis tincidunt tortor dui ut purus. Cras non interdum ligula. Cras lacinia quis felis a luctus. Nunc quis luctus urna. Pellentesque consectetur tincidunt nunc, quis semper massa luctus sit amet. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec a lorem eget quam pharetra pellentesque. Pellentesque quis odio magna. Duis sagittis placerat lectus non posuere.</p>
+    
+  </body>
+</html>
+
+
+<!--Las cabeceras están definidas en https://www.w3schools.com/html/html_head.asp -->
