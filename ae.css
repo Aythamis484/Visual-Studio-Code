@@ -1,13 +1,21 @@
+/*Imágenes https://www.w3schools.com/css/css3_images.asp*/
+
+div {
+  width:100%;
+}
 
 /* Galería https://www.w3schools.com/css/css_image_gallery.asp*/
 
 .gallery {
+  display: block;
+  width: 50%;   /*imágenes responsive*/
+  margin-left: auto;
+  margin-right: auto;
   padding: 5px;
-  margin: 10px;
   border: 1px solid #ccc;
-  float: left;
+  float: center
+;
   width: 180px;
-
 }
 
 div.gallery:hover {

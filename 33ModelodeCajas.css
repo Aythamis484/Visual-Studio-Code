@@ -1,0 +1,63 @@
+/*MODELO DE CAJAS: https://lenguajecss.com/css/modelo-de-cajas/que-es/ 
+Representación de los elementos HTML como una caja donde las dimensiones se representan
+como contenido, relleno (padding), borde y margen */
+
+* {
+    margin: 0px;
+    padding: 0px;
+  }
+  
+  html {
+    font-size: 15px;
+  }
+  
+  header {
+    color: azure;
+    width: 1000px;  /*ancho del contenido, en porcentaje es con respecto al ancho de la ventana*/
+    height:100px; /*alto del contenido*/
+    background-color:coral;
+    padding: 20px; /*separación del contenido y su borde*/
+    border: 5px solid black; /*borde*/
+    margin: 15px; /*espacio alrededor de la caja, L, R, T, B */
+    background-image: url(marcadeagua.png) /*archivos png con transparencia*/
+                                          /*archivos jpg para imágenes de fondo*/
+  }
+  
+  nav {                    /*unidades de medida:*/
+    width: 75%;            /*% con respecto al anchol contenedor padre*/
+    height: 100px;         /*píxeles: basado en la resolución de la pantalla, un punto de la pantalla. Para diseños precisos */
+    background-color: green;
+    border-style:double;
+    margin:50px;        
+    padding:20px;
+  }
+  
+  nav ul {
+    list-style-type: none;
+  }
+  
+  nav ul li {
+    font-size: 1.2em;      /*em unidad relativa al tamaño de la fuente del elemento actual.
+                            Escalable, 1.2*15px=18px /// si no definimos, tamaño estándar 
+                            por defecto 16px*/
+  }
+  
+  section {
+    width: 500px;
+    height:100px;
+    background-color: blue;
+    border: 10px groove #fd10ca;
+    font-size: 10px;
+    margin: 4em;          /*respecto al tamaño de la fuente del elemento actual: 4*10px=40px   */
+    padding:4rem;       /*rem Unidad relativa al tamaño de la fuente del elemento raíz: 4*15=60px<html>*/
+  }
+  
+  footer {
+    width: 50vw; /* Ancho del footer 50% del ancho de la ventana en función del área visible */
+    text-align: center; /* Centrar el contenido del texto sobre la caja*/
+    padding: 10px; /* Espaciado interno */
+    background-color: #333; /* Color de fondo oscuro */
+    color: white; /* Color del texto */
+    border-radius: 8px; /* Bordes redondeados */
+  }
+  /*Para centrar la caja con respecto a la ventana, se utiliza Flexbox*/
