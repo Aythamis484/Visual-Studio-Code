@@ -1,0 +1,24 @@
+
+/* Galería https://www.w3schools.com/css/css_image_gallery.asp*/
+
+.gallery {
+  padding: 5px;
+  margin: 10px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 180px;
+
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  text-align: center;
+}
