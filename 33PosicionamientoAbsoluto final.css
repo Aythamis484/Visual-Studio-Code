@@ -1,33 +1,32 @@
-*{
-    margin: 0px;
-    padding: 0px;
-}
-#outer{
-    border: 1px solid red; /*rojo*/
+body {
+    margin: 0;
+    padding: 0;
+ }
+ #outer {
     margin: 5em;
     height: 4em;
+    border: 1px solid #ff0000; /*rojo*/
     position: relative;
-}
-
-
-#inner{
-    border: 1px solid black; /*negro*/
-    background-color: #999999;
+ }
+ 
+ /*Un elemento position: relative se posiciona en relación con su posición normal.
+ Al configurar las propiedades superior, derecha, inferior e izquierda de un elemento
+ posicionado de manera relativa, este se ajustará para que no se encuentre en su posición normal.*/
+ 
+ #inner {
     width: 6em;
     height: 4em;
-    text-align: center;
-    line-height: 4em;
+    background-color: #999999; /*gris*/
     position: absolute;
-    left: 10em;
-}
-
-#inner2{
-    border: 1px solid black; /*negro*/
-    background-color: #bde783;
-    width: 6em;
-    height: 4em;
+    left: 5em;
     text-align: center;
-    line-height: 4em;
-    position: absolute;
-    left: 16em;
-}
+    line-height: 4em;      /*esta es una manera de alinear verticalmente, 
+                            darle el mismo tamaño que height*/
+    
+ }
+ 
+ /*Un elemento position: absolute;se posiciona en relación con el ancestro posicionado más cercano
+ (en lugar de posicionarse en relación con la ventana gráfica, como fijo).*/
+ 
+ /*Para mover el INNER hay qUe poner posición absoluta a inner pero cambiar a posición relativa a
+ outer (para que se desplace con respecto a outer)*/

@@ -1,0 +1,42 @@
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox */
+
+
+.flex-container {  /*obligado*/
+    display: flex; /*obligado*/
+    background-color: DodgerBlue;
+  }
+
+  .flex-container div {               /*Los elementos hijos de flex-container se convierten automáticamente en flex-items.*/
+    background-color: #f1f1f1;
+    margin: 10px;
+    padding: 20px;
+    font-size: 30px;
+  }
+  .flex-container > p {               /*Los elementos hijos de flex-container se convierten automáticamente en flex-items.*/
+    background-color: #f1f1f1;
+    margin: 10px;
+    padding: 20px;
+    font-size: 30px;
+  }
+
+  /**********/
+
+  .flex-container2 {  /*obligado*/
+    display: flex; /*obligado*/
+    background-color: greenyellow;
+  }
+
+  .flex-container2 > div {               /*Los elementos hijos de flex-container se convierten automáticamente en flex-items.*/
+    background-color: #f1f1f1;
+    margin: 10px;
+    padding: 20px;
+    font-size: 30px;
+  }
+
+  .flex-container2 p {               /*Los elementos hijos de flex-container se convierten automáticamente en flex-items.*/
+    background-color: #f1f1f1;
+    margin: 10px;
+    padding: 20px;
+    font-size: 30px;
+  }
+

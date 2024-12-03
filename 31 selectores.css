@@ -1,0 +1,90 @@
+/*TIPOS DE SELECTORES*/
+
+
+* {
+    margin: 0;
+    padding: 0;
+  }
+  /*El asterisco indica SELECTOR UNIVERSAL
+    que se aplica a todo el documento*/
+  /*--------------------------------------------------------------------*/
+  
+  
+  body {
+    background-color: orange;
+  }
+  
+  p {
+    color: red;
+    background-color: rgb(185, 172, 223) ;
+  }
+  /* el SELECTOR DE TIPO se aplica a cada uno de los elementos (etiquetas)
+     de la página*/
+  /*--------------------------------------------------------------------*/
+  
+  h1 {
+    color: yellow;
+  }
+  h2 {
+    color: yellow;
+  }
+  
+  
+  h1, h2 {
+    color: yellow ;
+    font-family: Verdana;
+  }
+  */
+  
+  /* se pueden agrupar las reglas individuales en una sola regla con un
+     SELECTOR MÚLTIPLE, incluyendo todos los selectores separados por una coma */
+  /*--------------------------------------------------------------------*/
+  
+  h1,h2 {
+    font-size: 26pt ;
+    color:blueviolet
+  }
+  h2 {
+    background-color: aquamarine ;
+  }
+  /* se pueden definir dos veces, una para propiedades comunes y otra para
+     propiedades específicas */
+  /*--------------------------------------------------------------------*/
+  
+  
+  p span {
+    color: blue ;
+  }
+  /* SELECTOR DESCENDIENTE selecciona elementos que se encuentran dentro de otros elementos
+  Un elemento es descendiente de otro cuando se encuentra entre las etiquetas de
+  apertura y de cierre del otro elemento*/
+  /*--------------------------------------------------------------------*/
+  
+  
+  .colorMarron {
+    color: SaddleBrown;
+    font-family: Verdana;
+  }
+  .colorFondoGris {
+    color:white;
+    background-color: grey;
+  }
+  p.tamañoGrande{
+    font-size: 5em;
+  }
+  /*SELECTOR DE CLASE: . se identifica con un punto y se declara en el documento
+  HTML con el atributo 'class'*/
+  /*--------------------------------------------------------------------*/
+  
+  
+  #destacado {
+    text-decoration: underline;
+  }
+  /*SELECTOR DE ID permite seleccionar un elemento de la página. Se identifica
+  con una almohadilla # y se declara en el documento HTML con el atributo 'id'*/
+  /*--------------------------------------------------------------------*/
+  
+  
+  /*diferencia entre id y class: id para estilos a un solo elemento específico
+  y class para varios elementos diferentes
+  /*--------------------------------------------------------------------*/

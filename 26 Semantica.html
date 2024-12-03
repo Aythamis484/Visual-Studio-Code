@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de etiquetas semánticas</title>
+    <link rel="stylesheet" href="27styles.css">
+    <script src="27script.js" defer></script>
+
+  </head>
+  <body>
+        
+    <!--Header: encabezado o sección importante-->
+    <header>
+      <h1>Mi sitio web</h1>
+
+      <!--Nav: barra de navegación-->
+      <nav>
+        <a href="/">Inicio</a>
+        <a href="/about">Acerca de</a>
+        <a href="/contact">Contacto</a>
+      </nav>
+    </header>
+
+    <!--Main: contenido principal de la página, solo debe haber uno-->
+    <main>
+      <h2>Mi primera página con CSS</h2>
+      <p>Este es el contenido principal de la página.</p>
+    </main>
+
+    <!--Section: contenido temáticamente relacionado-->
+    <section>
+      <h2>Servicios</h2>
+      <p>Descripción de servicios.</p>
+    </section>
+
+    <!--Aside: Contenido adicional como anuncios o enlace relacionados.
+    En una barra lateral-->
+    <aside>
+      <h3>Artículos relacionados</h3>
+      <ul>
+          <li><a href="#">Artículo 1</a></li>
+          <li><a href="#">Artículo 2</a></li>
+      </ul>
+    </aside>
+
+    <!--Article: contenido independiente, distribuido de manera aislada
+    Para artículos de noticias, blogs o entradas de redes sociales-->
+    <article>
+      <h2>Título del artículo/noticia</h2>
+      <p>Contenido del artículo.</p>
+
+      <!--Time: muestra fecha u hora-->
+      <p class="fecha">
+        Publicado el <time datetime="2024-11-04">04 de noviembre de 2024 </time>
+      </p>
+    </article>
+
+    
+    <!--Figure: contenido ilustrativo, figcaption: pie de imagen-->
+    <figure>
+      <img src="playa.jpg" alt="Imagen de una playa" style="width: 25%;">
+      <figcaption>Imagen de una playa</figcaption>
+    </figure>
+
+    <!--Details: contenedor que se puede mostrar u ocultar.
+    Summary: define el encabezado que se muestra antes de expandir-->
+    <details>
+      <summary>Ver más detalles sobre el producto</summary>
+      <p>Este producto está hecho con materiales ecológicos y tiene una garantía de 2 años.</p>
+    </details>
+
+    <!--Footer: pie de página, copyright o info de contacto
+    Añadimos un párrafo para mostrar la hora con javascript-->
+    <footer>
+      <p>© 2024 Mi sitio web. Todos los derechos reservados.</p>
+      <a href="/privacy">Política de privacidad</a>
+      <p id="demo"></p>
+    </footer>
+
+  </body>
+
+</html>

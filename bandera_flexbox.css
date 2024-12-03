@@ -1,0 +1,54 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+h1{
+    margin-left: 2.5em;
+    margin-top: 2em;
+}
+
+.flex-container {
+  display: flex;
+  border: 1px solid #AD1519;
+  width: 300px;
+  margin-left: 5em;
+}
+
+.flex-container div {
+  background-color: #AD1519;
+  font-size: 15px;
+  width: 50px;
+  height: 50px;
+/* Propiedades para centrar el número */
+  display: flex; /* Activa Flexbox dentro de cada div */
+  justify-content: center; /* Centra el texto horizontalmente */
+  align-items: center; /* Centra el texto verticalmente */
+}
+
+
+.flex-container2 {
+  display: flex;
+  border: 1px solid #FABD00;
+  width: 300px;
+  margin-left: 5em;
+}
+
+.flex-container2 img {
+    height:70px;
+    margin-left: 60px;
+    margin-top: 10px;
+    position: absolute;
+    z-index: 3;
+}
+
+.flex-container2 div {
+  background-color: #FABD00;
+  font-size: 15px;
+  width: 50px;
+  height: 50px;
+  /* Propiedades para centrar el número */
+  display: flex; /* Activa Flexbox dentro de cada div */
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+}
