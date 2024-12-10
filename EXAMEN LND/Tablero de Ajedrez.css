@@ -8,11 +8,11 @@ body {
   }
 
   section {
-        width: 35em;
+        width: 20em;
         height: 0em;
         background-color: rgb(255, 255, 255);
         font-size: 10px;
-        margin: 3em;     
+        margin: 4em;     
         display: grid;
         place-items: center;
   }
