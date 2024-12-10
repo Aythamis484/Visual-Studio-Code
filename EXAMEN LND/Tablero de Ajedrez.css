@@ -1,20 +1,35 @@
-body {
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+  
+  header {
+    color: #ffffff;
+    text-align: center;
     background-color: #000000;
+    padding: 10px;
   }
 
-  h1 {
-    text-align:center;
+  footer {
     color: #ffffff;
-  }
+    text-align:center;
+    text-decoration: underline;
+}
 
   section {
         width: 20em;
-        height: 0em;
-        background-color: rgb(255, 255, 255);
+        background-color: #000000;
         font-size: 10px;
-        margin: 4em;     
-        display: grid;
+        text-align: center;
+        margin: 2em;     
+        display: flex;
+        place-content: center;
         place-items: center;
+        place-content: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
   }
 
   #dentro {
@@ -658,11 +673,4 @@ body {
 img {
     height: 4em;
     width: 4em;
-}
-
-footer {
-    margin-top: 20em;
-    display: grid;
-    text-align:center;
-    color: #ffffff;
 }
