@@ -1,0 +1,46 @@
+*{
+    color: gray;
+}
+
+p {
+    color: green;
+}
+
+p {
+    color: blueviolet;
+}
+
+.textoazul {
+    color: blue;
+}
+
+#textomarron {
+    color: brown;
+}
+
+#textonaranja {
+    color: orange;
+}
+
+p.textorojo {
+    color: red;
+}
+
+
+
+/*
+En este ejemplo están de menos a más:
+Entre diferentes <p> gana el último que aparece
+Entre p y p.class gana p.class (da igual el orden donde aparece)
+Entre p y p.id gana p.id (da igual el orden donde aparece)
+Entre id y class gana id (da igual el orden donde aparece)
+El que pierde siempre es el selector universal
+
+Orden de prioridad:
+id (#)
+p.class
+.class
+p
+*
+
+*/

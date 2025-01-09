@@ -1,0 +1,41 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+
+/* Un Grid Layout (cuadrícula) debe tener un elemento padre con la propiedad display:grid establecida.
+
+Los elementos secundarios directos del contenedor de la cuadrícula se convierten automáticamente en elementos de la cuadrícula. */
+
+.grid-container {
+  display:grid;
+  grid-template-columns: auto auto auto; /*definiendo un grid con tres columnas*/
+  background-color: #034377;           /*Cada columna tendrá un ancho automático,lo que significa que su tamaño dependerá del contenido dentro de cada columna*/
+  padding: 5px;                         /*hueco entre los elementos de la cuadrícula*/
+  margin: 5px;
+}
+
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
+.grid-container2 {
+    display:grid;
+    grid-template-columns: auto auto auto auto;
+    background-color: #03770d;
+    padding: 10px;
+    gap: 10px;     /*espaciado entre columnas en grid*/
+  }
+  
+  .grid-item2 {
+    background-color: rgba(212, 230, 204, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+
+  }

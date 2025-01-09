@@ -1,0 +1,56 @@
+* {
+    box-sizing: border-box; /*el ancho y alto del elemento solo incluyen el contenido del elemento. El relleno (padding) y el borde (border) se añaden al tamaño final del elemento.*/
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+.header {
+  grid-area: header;
+  background-color: #f1f1f1;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+}
+
+/* The grid container */
+.grid-container {
+  display: grid;
+  background-color: #f1f1f1;
+  grid-template-areas:  /*Permite nombrar áreas específicas del grid para que los elementos hijos puedan posicionarse en ellas.*/
+    'header header header header header header'       /*Las comillas simples ('...') delimitan las áreas por fila, toda la fila está ocupada por el área llamada header*/ 
+    'left middle middle middle middle right'          /*La primera celda corresponde al área left, las siguientes 4 por middle, la última por right*/
+    'footer footer footer footer footer footer';     /*toda la fila corresponde a footer*/
+  grid-column-gap: 10px; /*- if you want gap between the columns */
+} 
+
+.left {
+    grid-area: left;    /* Style the left column */
+    background-color:#aaaaaa;
+    padding: 10px;
+    height: 300px; /* Should be removed. Only for demonstration */
+}
+.middle {
+    grid-area: middle; /* Style the middle column */
+    background-color:#bbbbbb;
+    padding: 10px;
+    height: 300px; /* Should be removed. Only for demonstration */
+}
+.right {
+    grid-area: right; /* Style the right column */
+    background-color:#cccccc;
+    padding: 10px;
+    height: 300px; /* Should be removed. Only for demonstration */
+}
+
+
+/* Style the footer */
+.footer {
+  grid-area: footer;
+  background-color: #f1f1f1;
+  padding: 10px;
+  text-align: center;
+}
+

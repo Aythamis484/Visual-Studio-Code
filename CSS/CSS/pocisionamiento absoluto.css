@@ -1,0 +1,14 @@
+body {
+    margin: 0;
+    padding: 0;
+ }
+ #outer {
+    margin: 5em;           /*16px*5=80px*/
+    border: 1px solid #ff0000;
+ }
+ #inner {
+    width: 5em;            /*16px*6=96px*/
+    border: 1px solid #ff0000;
+    height: 4em;
+    background-color: #999999;
+ }
