@@ -9,14 +9,19 @@
     <h1> Hola programadores, vamos a aprender arimética con javascript</h1>
 
     <script>
-        let x = 10;
-        let y = 3;
+        let x;
+        let y;
+
+        let entrada = prompt ("Escribe el valor de x: ");
+        x = Number (entrada);
+
+        entrada = prompt ("Escribe el valor de y: ");
+        y = Number (entrada);
 
         console.log ("Valor de x: ", x);
         console.log ("Valor de y: ", y);
 
         let suma = x+y;
-
         //Sin comas se concatena y no se suma, con comas o entre parentesis si.
         document.write ("La suma de x e y es : " + x+y + "<br>");
         document.write ("La suma con variables de x e y es : ", suma);
@@ -30,6 +35,13 @@
 
         z = x/y;
         console.log ("La división es: ", z);
+
+        z = x%y;
+        console.log (" El resto de la división es: ", z);
+
+        z = x**y;
+        console.log (" El exponente de hacer x elevado a y es:", z);
+
 
     </script>
 </body>
