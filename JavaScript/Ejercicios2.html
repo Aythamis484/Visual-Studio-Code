@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios2</title>
+</head>
+<body>
+    <h1>Ejercicios2</h1>
+
+    <p>4. Crea una variable con un número
+         y muestra por consola el número anterior y el siguiente</p>
+
+    <script>
+        let numero = 8;
+        
+        console.log("Número: ", numero);
+        
+        numero--; //numero = numero-1
+        console.log("Anterior: ",  numero);
+
+        numero++; //vuelvo al anterior numero = numero + 1
+        numero++; //incremento numero = numero + 1
+        console.log("Siguiente: ", numero++);
+
+    </script>
+
+    <p>5. Calcula el área de un rectángulo</p>
+    <script>
+        let base = 8;
+        let altura = 5;
+
+        console.log("Base: ", base);
+        console.log("Altura: ", altura);
+
+        let area = base * altura;
+        console.log("El área del rectángulo es: ", area);
+    </script>
+
+    <p>6. Intercambia los valores de dos variables. Utiliza una variable temporal
+        para guardar el dato</p>
+    <script>
+        let a = 3.1416;
+        let b = 2.718;
+
+        console.log("Valor de a:", a);
+        console.log("Valor de b:", b);
+
+        let temp = a;
+        a=b;
+        b=temp;
+
+        console.log("Valor de a:", a);
+        console.log("Valor de b:", b);
+
+    </script>
+
+
+</body>
+</html>

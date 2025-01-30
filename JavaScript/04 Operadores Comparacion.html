@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operadores de comparación</title>
+</head>
+<body>
+    <h1>Vamos a comparar cosas en JavaScript</h1>
+    <h2>Datos:</h2>
+    <p id="valores"></p>
+    <h2>Comparamos:</h2>
+    <p id="resultados"></p>
+    
+    <script>
+        
+        //valores iniciales
+        let a = 2;
+        let b = 6;
+        let c = -1;
+        let d = 10;
+        let e = 3;
+
+
+        //mostramos los valores. En una variable donde se mete el texto
+        //añadimos en el párrafo con ID valores el contenido de datos
+        let datos = ("Valores: a: " + a + " b: " + b + " c: " + c + " d: " + d + " e: " +e);
+        document.getElementById("valores").innerHTML = datos;
+        
+
+        //metemos en la variable comparador el texto con la comparación
+        //añadimos en el párrafo con id resultados el contenido de comparador
+        let comparador = ("¿a>b?: " + (a>b) + "<br>");
+        document.getElementById("resultados").innerHTML = comparador;
+
+        //con el operador += añadimos un párrafo nuevo
+        comparador = ("¿a<=e?: " + (a<=e) + "<br>");
+        document.getElementById("resultados").innerHTML += comparador;
+
+        comparador = ("¿b>c?: " + (b>c) + "<br>");
+        document.getElementById("resultados").innerHTML += comparador;
+
+        comparador = ("¿d>=c?: " + (d>=c) + "<br>");
+        document.getElementById("resultados").innerHTML += comparador;
+
+        comparador = ("¿a==b?: " + (a==b) + "<br>");
+        document.getElementById("resultados").innerHTML += comparador;
+
+        comparador = ("a!= b: " + (a!=b) + "<br>");
+        document.getElementById("resultados").innerHTML += comparador;
+        
+
+        /*en la línea 18, si queremos meter los datos por pantalla:
+        
+        let a = prompt("Escribe el valor de a: ");
+        a=Number(a);
+
+        let b = prompt("Escribe el valor de b: ");
+        b=Number(b);
+
+        let c = prompt("Escribe el valor de c: ");
+        c=Number(c);
+
+        let d = prompt("Escribe el valor de d: ");
+        d=Number(d);
+
+        let e = prompt("Escribe el valor de e: ");
+        e=Number(e);
+        */
+
+    </script>
+
+</body>
+</html>
