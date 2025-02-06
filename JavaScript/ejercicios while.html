@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios while</title>
+</head>
+<body>
+    <p1>Contador básico: escribe un programa que imprima los números del 1 al 10 usando un bucle while <br> </p1>
+    
+ <p id="cuenta"></p>
+ <script>
+    /*let contador = 1 ;
+    while (contador<=10){
+        document.getElementById("cuenta").innerHTML+=("Número " + contador+ "<br>");
+        contador++;
+    }*/
+ </script>
+
+
+
+    <p2>Suma hasta un límite: crea un programa que pida dos números al usuario y los sume continuamente hasta que el total sea mayor que 100. Añade cuantas veces se ha repetido la suma. Como ejemplo prueba con los valores de 5 y 5, debe dar 100 y repetirse 10 veces <br> </p2>
+    <p id="sumarhasta100"></p>
+
+    <script>
+        let a = prompt("Escribe un número: ");
+        a=Number(a);
+
+        let b = prompt("Escribe un número: ");
+        b=Number(b);
+        let suma = 0;
+        let contador = 0;
+        while (suma<100) {
+            suma = suma + a + b;
+            contador++;
+        }
+        console.log(suma);
+        console.log(contador);
+        document.getElementById ("sumarhasta100").innerHTML=("La suma repetida < 100   de " + a + " y " + b + " es " + suma + " y se ha repetido " + contador + " veces ");
+    </script>
+</body>
+</html>
