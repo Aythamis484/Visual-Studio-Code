@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funciones</title>
+</head>
+<body>
+    <p>Bloque de código para realizar una tarea especificada</p>
+    <p1></p1>
+    <script>
+        //Se llama a la función, el valor del resultado se guarda en x
+        let a = prompt("Dame un número: ");
+        a=Number(a); //obliga a que el valor de a sea un número
+
+        let b = prompt("Dame otro número, ")
+        b=Number(b);
+
+        let resultado = multiplica(a,b);
+        console.log ("Valor de resultado: ", resultado);
+        function multiplica (a,b) {
+            return a*b;
+        }
+
+        resultado = multiplica(9,2)
+        console.log ("Valor de resultado: ", resultado);
+    </script>
+</body>
+</html>
