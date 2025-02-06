@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width initial-scale=1.0">
+    <title>Ejercicios funciones</title>
+</head>
+<body>
+    <p>Dados tres números, escribe una función que devuelva el número mayor <br> </p>
+    <p1> </p1>
+    <script>
+        /*let a = prompt("Dame un número: ");
+        a=Number(a); //obliga a que el valor de a sea un número
+
+        let b = prompt("Dame otro número, ")
+        b=Number(b);
+
+        let c = prompt("Dame otro número, ")
+        b=Number(c);*/ //También lo podemos hacer por prompt eligiendo los números que queramos
+        
+        let a = 5;
+        let b = 8;
+        let c = 2;
+        let x = numero (a,b,c);
+
+        function numero (a,b,c) {
+            if ((a>b) && (a>c)) {
+                return a;
+            }           
+            else {
+                if ((b>a) && (b>c)){
+                    return b;
+                } 
+            else {
+                if ((c>a) && (c>b)){
+                return c;
+            }
+        }
+    }
+        }
+
+        //La función Math.max devuelve el número mayor
+        console.log (Math.max (a,b,c))
+
+        let texto = "Ola k ase";
+        console.log("El texto ", texto, " tiene ", texto.length, "caracteres");
+    </script>
+</body>
+</html>
