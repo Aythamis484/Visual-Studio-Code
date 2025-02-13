@@ -45,6 +45,27 @@
         //La función texto.length cuenta los caracteres que tiene el texto.
         let texto = "Ola k ase";
         console.log("El texto ", texto, " tiene ", texto.length, "caracteres");
+
+        //La función setTimeout nos permite ejecutar otra función una vez,
+        //pasado un intervalo de tiempo dado.
+        //entre paréntesis funcion a ejecutar, tiempo de retraso.
+        setTimeout(espera, 2000);
+        function espera () {
+            console.log ("Esperé 2 segundos para mostrarme");
+        }
+
+        //a función setInterval() ejecuta una función repetidamente
+        //hay que pararla con ClearInterval.
+        setInterval (repetir, 2000);
+        function repetir (){
+        let i=1
+        if (i<=3) {
+            console.log ("Me repito mas que el ajo", i);
+        }
+        else {
+            clearInterval();
+        }
+    }
     </script>
 </body>
 </html>

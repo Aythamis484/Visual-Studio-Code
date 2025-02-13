@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Feliz año!</title>
+</head>
+<body>
+    <script>
+let cuentaatras = 10;
+let countdownInterval = setInterval(function() {
+    console.log("Cuenta atrás para las campanadas: " + cuentaatras + " segundos");
+    cuentaatras--;
+
+    if (cuentaatras < 0) {
+        clearInterval(countdownInterval);
+        // Iniciar contador de las 12 uvas
+        startGrapesCountdown();
+    }
+}, 1000);
+
+function startGrapesCountdown() {
+    let cuentauvas = 1;
+    let grapesInterval = setInterval(function() {
+        console.log("Uva " + cuentauvas);
+        cuentauvas++;
+        if (cuentauvas > 12) {
+            clearInterval(grapesInterval);
+            console.log("¡Feliz Año Nuevo!");
+        }
+    }, 1000);
+}
+    </script>
+</body>
+</html>
+
