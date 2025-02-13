@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Métodos y propiedades</title>
+</head>
+<body>
+    <h1>Hola Mundo</h1>
+    <p>Hola, soy un párrafo</p>
+
+    <!--
+    document.title = "Nuevo Título" Cambia el título (propiedad)
+    document.getElementById("miTitulo") selecciona un elemento por id (método)
+    textContent muestra o iserta texto
+
+    -->
+    
+    <script>
+        console.log(document.title); // Muestra el título actual
+        document.title = "Nuevo Título"; // Cambia el título de la pestaña
+  
+        let titulo = document.getElementById("parrafo");
+        console.log(titulo.textContent); // Muestra el texto del elemento
+
+        let h1 = document.getElementById("encabezado");
+        console.log (h1.textContent);
+        document.getElementById("encabezado").textContent = "texto insertado";   
+    </script>
+
+</body>
+</html>
