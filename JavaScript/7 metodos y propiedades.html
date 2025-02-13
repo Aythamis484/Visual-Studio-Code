@@ -13,7 +13,6 @@
     document.title = "Nuevo Título" Cambia el título (propiedad)
     document.getElementById("miTitulo") selecciona un elemento por id (método)
     textContent muestra o iserta texto
-
     -->
     
     <script>
@@ -26,6 +25,21 @@
         let h1 = document.getElementById("encabezado");
         console.log (h1.textContent);
         document.getElementById("encabezado").textContent = "texto insertado";   
+
+        console.log(navigator.userAgent); //devuelve una cadena que contiene información sobre el navegador del usuario, como su nombre, versión y el sistema operativo que está usando.
+
+        //Demuestra un valor booleano que dice si estas conectado o no a internet
+        if (navigator.onLine) { // devuelve un valor booleano (true o false) que indica si el dispositivo está conectado a Internet o no.
+    console.log("Estás conectado a Internet.");
+} else {
+    console.log("No estás conectado a Internet.");
+} 
+
+console.log(screen.width);  // Ancho total de la pantalla
+console.log(screen.height); // Alto total de la pantalla
+console.log(screen.availWidth);  // Ancho disponible sin la barra de tareas
+console.log(screen.availHeight); // Alto disponible sin la barra de tareas
+
     </script>
 </body>
 </html>

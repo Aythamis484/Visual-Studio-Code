@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo getElementById</title>
+</head>
+<body>
+    <p id="original">Hola mundo</p>
+    <button onclick="cambiaTexto('hola')">Hola</button>
+    <button onclick="cambiaTexto('adios')">Adiós</button>
+    <button onclick="restauraTexto()">Restaurar</button>
+<!--
+    <button onclik="myFunction()">Click me</button>
+-->
+    <script>
+        //guarda el contenido de p antes de darle al botón
+        let textoInicial = document.getElementById("original").textContent; 
+
+        function cambiaTexto(texto) {
+            document.getElementById("original").textContent = texto;
+        }
+
+        function cambiaTexto(texto) {
+            document.getElementById("original").textContent = texto;
+        }
+
+        function restauraTexto() {
+            document.getElementById("original").textContent = textoInicial;
+        }
+    </script>
+</body>
+</html>
