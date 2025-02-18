@@ -13,6 +13,9 @@
 <!--
     <button onclik="myFunction()">Click me</button>
 -->
+    <p id="segundo">Mi segundo párrafo</p>
+    <button onclick="cambiaTexto2()">Cambia el texto por pantalla</button>
+
     <script>
         //guarda el contenido de p antes de darle al botón
         let textoInicial = document.getElementById("original").textContent; 
@@ -27,6 +30,11 @@
 
         function restauraTexto() {
             document.getElementById("original").textContent = textoInicial;
+        }
+
+        function cambiaTexto2() {
+            let textoUsuario = prompt ("Escribe el texto que desea agregar:");
+            document.getElementById("segundo").textContent = textoUsuario;
         }
     </script>
 </body>
