@@ -3,20 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Método getElementByTagName()</title>
+    <title>Método getElementsByTagName()</title>
 </head>
 <body>
     <h1>Vamos a contar los párrafos</h1>
-    <h2>Método getElementByTagName()</h2>
+    <h2>Método getElementsByTagName()</h2>
     <p>Algo de texto</p>
     <p>Algo de texto</p>
 
-    <div id="div1" style="border: solid blue 3px">
+    <div id="div1" style="border: solid blue 5px">
         <p>Algo de texto en div1</p>
         <p>Algo de texto en div1</p>
         <p>Algo de texto en div1</p>
 
-        <div id="div2" style="border: solid red 3px">
+        <div id="div2" style="border: solid red 5px">
             <p>Algo de texto en div2</p>
             <p>Algo de texto en div2</p>
         </div>
@@ -25,12 +25,39 @@
     <p>Algo de texto</p>
     <p>Algo de texto</p>
 
-    <button onclick="contarParrafos()">Cuenta todos los elementos p del documentos</button>
+    <button onclick="contarParrafos()">Cuenta todos los elementos p del documento</button>
+    <button onclick="contarParrafos2()">Cuenta todos los elementos p del div1</button>
+    <button onclick="contarParrafos3()">Cuenta todos los elementos p del div2</button>
 
     <script>
         function contarParrafos() {
+
             let todos = document.getElementsByTagName("p");
             console.log (todos);
+            
+            let longitud = todos.length;
+            alert("Hay " + longitud + " <p> elementos en este documento");
+        }
+
+        function contarParrafos2() {
+
+            let div1 = document.getElementById("div1");
+            console.log (div1);
+
+            let div1Parr = div1.getElementsByTagName("p");
+            console.log(div1Parr);
+
+            alert("Hay " + div1Parr.length + " <p> elementos en el documento div1");
+
+                debugger;
+        }
+
+        function contarParrafos3() {
+
+            let div2Parr = div2.getElementsByTagName("p");
+            console.log(div2Parr);
+
+            alert("Hay " + div2Parr.length + " <p> elementos en el documento div2");
         }
     </script>
 </body>
