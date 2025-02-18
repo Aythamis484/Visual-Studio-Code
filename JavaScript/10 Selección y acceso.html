@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document.getEelementByClass</title>
+</head>
+<body>
+    <h1>Ejemplo de document.getElementByClass("class")</h1>
+    <h2>Escogemos todos los class</h2>
+    <h3>Vamos a cambiar los nombres</h3>
+
+    <h2>Lista de nombres</h2>
+
+    <p class="nombres">María</p>
+    <p class="nombres">Ernesto</p>
+    <p class="nombres">Julia</p>
+
+    <button onclick="cambiarNombres()">Cambia los nombres</button>
+
+    <script>
+        function cambiarNombres() {
+            let elementos = document.getElementsByClassName("nombres");
+            console.log (elementos);
+            console.log(elementos.length);
+
+            let i=0;
+
+            for (i; i<elementos.length; i++) {
+                elementos[i].textContent = "texto cambiado" + (i+1);
+            }
+        }
+    </script>
+</body>
+</html>
