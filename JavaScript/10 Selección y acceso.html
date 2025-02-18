@@ -17,6 +17,8 @@
     <p class="nombres">Julia</p>
 
     <button onclick="cambiarNombres()">Cambia los nombres</button>
+    <button onclick="cambiarNombresconMemoria()">Cambia los nombres y guardarlos previamente</button>
+
 
     <script>
         function cambiarNombres() {
@@ -25,10 +27,24 @@
             console.log(elementos.length);
 
             let i=0;
-
             for (i; i<elementos.length; i++) {
                 elementos[i].textContent = "texto cambiado" + (i+1);
             }
+        }
+
+        function cambiarNombresconMemoria() {
+            let nombreGuardados=[];
+
+            let elementos = document.getElementsByClassName("nombres");
+            console.log (elementos);
+            console.log(elementos.length);
+
+            let i=0;
+            for (i; i<elementos.length; i++) {
+                nombreGuardados[i]=elementos[i].textContent;
+                elementos[i].textContent = "texto cambiado" + (i+1);
+            }
+            console.log(nombreGuardados);
         }
     </script>
 </body>

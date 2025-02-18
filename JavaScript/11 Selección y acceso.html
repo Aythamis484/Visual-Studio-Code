@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MétodoquerySelector()</title>
+</head>
+<body>
+    <h1>Ejemplo de querySelector()</h1>
+    <h2>Escogemos el primer elemento que aparezca</h2>
+    
+   
+    <div id="contenedor" style="border: solid blue 3px">
+        <p class="nombres">Juan</p>
+        <p class="nombres">María</p>
+        <p class="nombres">Carlos</p>
+        <p class="nombres">Ana</p>
+        <p class="nombres">Luis</p>
+    </div>
+
+    <!--Crea la función Elige Primero para que inserte en el párrafo el primer nombre que aparezca-->
+    <button onclick="eligePrimero()">Elige el primer nombre</button>
+    <p id="solucion"></p>
+
+    <script>
+        function eligePrimero() {
+            let nombre = document.querySelector(".nombres").textContent;
+            document.getElementById("solucion").textContent=nombre;
+        }
+    </script>
+</body>
+</html>
