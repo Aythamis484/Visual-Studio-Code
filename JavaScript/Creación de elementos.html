@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear un nuevo elemento al HTML</title>
+</head>
+<body>
+    <h1>JavaScript HTML DOM</h1>
+    <h2>Añadir un nuevo elemento al HTML</h2>
+    <ol>
+        <li>Creamos un elemento con createElement()</li>
+        <li>Creamos el texto con createTextNode()</li>
+        <li>Agregar el texto al elemento con appendChild(node)</li>
+        <li>Agregamos el nuevo elmento a un nodo existente con appendChild(node)</li>
+        <li>Con el primer botón añadimos el nuevo elemento como el último hijo del padre</li>
+        <li>Si quieres colocarlo entre varios elementos utiliza el método insertBefore()</li>
+        <li>También podemos añadirle un atributo al nuevo elemento con el método setAttribute()</li>
+    </ol>
+
+    <h2>Ejemplo</h2>
+
+    <div id="div1">
+        <p id="p1">Párrafo 1</p>
+        <p id="p2">Párrafo 2</p>
+    </div>
+    <button onclick="crearParrafo()">Crea un párrafo al final</button>
+    <button onclick="crearParrafoAntes()">Crea un párrafo antes</button>
+
+        <script>
+            function crearParrafo() {
+                const parrafo = document.createElement("p");
+                const texto = document.createTextNode("Este es el nuevo párrafo");
+                parrafo.appendChild(texto);
+
+                const element = document.getElementById("div1");
+                element.appendChild(parrafo);
+            }
+
+            function crearParrafoAntes() {
+
+            }
+
+
+
+
+        </script>
+
+
+
+</body>
+</html>
