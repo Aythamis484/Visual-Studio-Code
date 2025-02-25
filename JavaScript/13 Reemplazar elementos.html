@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reemplazo dr elementos</title>
+</head>
+<body>
+    
+    <h2>JavaScript HTML DOM</h2>
+    <h3>Reemplaza un elemento del HTML.</h3>
+    <ol>
+        <li>Creamos el elemento, el texto y añadimos el texto al elemento</li>
+        <li>Seleccionamos el padre y el hijo que vamos a reemplazar</li>
+        <li>Modificamos el elemento seleccionado con replaceChild(node)</li>
+    </ol>
+
+    <div id="div1">
+        <p id="p1">Este es el párrafo 1</p>
+        <p id="p2">Este es el párrafo 2</p>
+    </div>
+
+    <button onclick="modificarParrafo()">Modifica el párrafo 1</button>
+
+    <script>
+        function modificarParrafo() {
+            const parrafo = document.createElement("p");
+            const texto = document.createTextNode("Este es el texto reemplazado");
+            parrafo.appendChild(texto);
+
+            const padre = document.getElementById("div1");
+            const hijo = document.getElementById("p1");
+            padre.replaceChild(parrafo, hijo);
+        }
+
+    </script>
+</body>
+</html>

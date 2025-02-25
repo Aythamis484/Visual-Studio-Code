@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eliminar elementos</title>
+</head>
+<body>
+    
+    <h2>JavaScript HTML DOM</h2>
+    <h3>Eliminar un elemento HTML</h3>
+    <ol>
+        <li>Seleccionamos el elemento a eliminar</li>
+        <li>Usamos el método remove()</li>
+        <li>Usamos el método removeChild() para eliminar un hijo (versiones antiguas de navegadores)</li>
+    </ol>
+
+    <div id="div1">
+        <p id="p1">Este es el párrafo 1</p>
+        <p id="p2">Este es el párrafo 2</p>
+        <p id="p3">Este es el párrafo 3</p>
+    </div>
+
+    <button onclick="eliminar()">Elimina el primer párrafo</button>
+    <button onclick="eliminarHijo()">Elimina el tercer párrafo</button>
+
+        <script>
+            function eliminar() {
+                document.getElementById("p1").remove();
+            }
+
+            function eliminarHijo() {
+                const padre = document.getElementById("div1");
+                const hijo = document.getElementById("p3");
+                padre.removeChild(hijo);
+            }
+        </script>
+
+
+
+</body>
+</html>
