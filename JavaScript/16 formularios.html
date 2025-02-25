@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios Tomar valores</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .form-container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        label, input, button {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        button {
+            background: #28a745;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Pedir Hora - Peluquería</h2>
+        <form id="formularioCita" >
+            <label for="name">Nombre</label>
+            <input type="text" id="name" required>
+
+            <label for="phone">Teléfono:</label>
+            <input type="tel" id="phone" required>
+
+            <label for="date">Fecha:</label>
+            <input type="date" id="date" required>
+
+            <label for="time">Hora:</label>
+            <input type="time" id="time" required>
+
+            <button type="submit">Pedir Hora</button>
+        </form>
+        <p id="confirmation" style="display:none; color: green;"></p>
+    </div>
+
+    <script>
+        /*Escucha el evento "submit" del formulario.
+        Evita que la página se recargue (event.preventDefault()).
+        Obtiene los valores ingresados por el usuario.
+        Muestra un mensaje de confirmación con los datos de la cita.
+        Resetea el formulario después del envío.*/
+
+        document.getElementById("formularioCita").addEventListener("submit", function(event) {
+            event.preventDefault(); // Evita que la página se recargue
+
+            // Obtiene los valores ingresados
+            const nombre = document.getElementById("name").value;
+            const telefono = document.getElementById("phone").value;
+            const fecha = document.getElementById("date").value;
+            const hora = document.getElementById("time").value;
+
+            // Muestra el mensaje de confirmación
+            const mensaje = `La cita para ${nombre} con teléfono ${telefono} es para el día ${fecha} a las ${hora}.`;
+            const confirmation = document.getElementById("confirmation");
+            confirmation.textContent = mensaje;
+            confirmation.style.display = "block"; // Hace visible el mensaje
+
+            // Resetea el formulario
+            document.getElementById("formularioCita").reset();
+         });
+         
+    </script>
+
+</body>
+</html>

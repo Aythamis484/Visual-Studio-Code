@@ -29,12 +29,12 @@
 
         <script>
             function crearParrafo() {
-                const parrafo = document.createElement("p");
-                const texto = document.createTextNode("Este es el nuevo párrafo");
-                parrafo.appendChild(texto);
+                const parrafo = document.createElement("p"); //creamos un párrafo
+                const texto = document.createTextNode("Este es el nuevo párrafo"); //creamos un texto
+                parrafo.appendChild(texto); //añadir el texto al párrafo
 
-                const element = document.getElementById("div1");
-                element.appendChild(parrafo);
+                const element = document.getElementById("div1"); //seleccionamos donde colocamos
+                element.appendChild(parrafo); //añadir el nuevo párrafo al div
             }
 
             function crearParrafoAntes() {
