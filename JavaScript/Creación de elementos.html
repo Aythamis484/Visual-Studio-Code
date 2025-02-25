@@ -38,15 +38,15 @@
             }
 
             function crearParrafoAntes() {
+                const parrafo = document.createElement("p");
+                const texto = document.createTextNode("Este es el párrafo del medio");
+                parrafo.appendChild(texto);
+                parrafo.setAttribute("id", "p3");
 
+                const elementopadre = document.getElementById("div1");
+                const hijo = document.getElementById("p2");
+                elementopadre.insertBefore(parrafo, hijo);         
             }
-
-
-
-
         </script>
-
-
-
 </body>
 </html>
