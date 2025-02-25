@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modificación de estilos</title>
+</head>
+<body>
+    
+    <h1 id="id1">Encabezado</h1>
+    <p id="p1">
+        This is a text.
+        This is a text.
+        This is a text.
+        This is a text.
+    </p>
+
+    <button onclick="cambiarColor()">Click Me!</button>
+    <button onclick="volverInvisible()">Haz invisible el párrafo</button>
+    <button onclick="volverVisible()">Haz visible el párrafo</button>
+
+    <button onmouseover="volverInvisible()" onmouseout="volverVisible()">Pasa el ratón</button>
+
+    <button onmouseover="mostrarFecha()" onmouseout="quitarFecha()">Mostrar la fecha</button>
+    <p id="fecha"></p>
+
+    <script>
+        function cambiarColor() {
+            document.getElementById("id1").style.color="red";
+            document.getElementById("id1").style.padding="2em";
+
+        }
+
+        function volverInvisible() {
+            document.getElementById("p1").style.visibility="hidden";
+        }
+
+        function volverVisible() {
+            document.getElementById("p1").style.visibility="visible";
+        }
+
+        function mostrarFecha() {
+            document.getElementById("fecha").textContent=Date();
+            document.getElementById("fecha").style.fontStyle="italic";
+        }
+
+        function quitarFecha() {
+            document.getElementById("fecha").textContent="";
+        }
+    </script>
+</body>
+</html>
