@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recuperación ejercicio 2</title>
+<link rel="stylesheet" type="text/css" href="https://www3.gobiernodecanarias.org/educacion/cau_ce/cookies/cookieconsent.min.css"/><script  type="text/javascript" src="https://www3.gobiernodecanarias.org/educacion/cau_ce/cookies/cookieconsent.min.js"></script><script type="text/javascript" src="https://www3.gobiernodecanarias.org/educacion/cau_ce/cookies/cauce_cookie.js"></script><script type="text/javascript" src="https://www3.gobiernodecanarias.org/educacion/cau_ce/estadisticasweb/scripts/piwik-base.js"></script><script type="text/javascript" src="https://www3.gobiernodecanarias.org/educacion/cau_ce/estadisticasweb/scripts/piwik-eforma.js"></script></head>
+<body>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            text-align: center;
+        }
+        #tareas {
+            padding-left: 20px;
+            list-style-type: decimal;
+        }
+        .lista {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            border: 1px solid #ccc;
+            margin: 5px 0;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+        button {
+            background-color: #9000ff;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            margin: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 12px;
+        }
+
+        button:hover {
+            background-color: #50008e;
+        }
+
+        button.naranja {
+            background-color: rgb(163, 101, 0);
+        }
+
+    </style>
+</body>
+    <h1>Lista de Tareas</h1>
+    <p>Añade una nueva tarea por prompt</p>
+    <button onclick="agregarTarea()">Agregar</button>
+
+    <ol id="tareas"></ol>
+
+    <button onclick="eliminarTarea()">Eliminar tarea</button>
+
+    <button onclick="limpiarLista()">Limpiar Lista</button>
+    <p style="color: rgb(163, 101, 0);">Con este botón puedes añadir observaciones a la agenda</p>
+
+    <button onclick="ponerObservaciones()" class="naranja">Añadir observaciones</button>
+    <p id="observaciones"></p>
+    
+    <script>
+            function agregarTarea() {
+                
+            }
+        function ponerObservaciones() {
+                const parrafo = document.createElement("p"); //creamos un párrafo
+                const texto = document.createTextNode("Este es una nueva observación"); //creamos un texto
+                parrafo.appendChild(texto); //añadir el texto al párrafo
+
+                const element = document.getElementById("observaciones"); //seleccionamos donde colocamos
+                element.appendChild(parrafo); //añadir el nuevo párrafo al div
+            }
+
+            function eliminarTarea() {
+                document.getElementById("tareas").remove();
+            }
+
+            function limpiarLista() {
+                
+            }
+    </script>
+</html>
