@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Tecnología</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .producto {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 id="titulo">Bienvenido a la Tienda de Tecnología</h1>
+
+    <p class="descripcion">Explora nuestros productos más vendidos:</p>
+
+    <div id="catalogo">
+        <div class="producto">
+            <h3 class="nombre">Laptop Gamer</h3>
+            <p class="precio">Precio: 1500€</p>
+            <p class="info">Potente laptop con tarjeta gráfica dedicada.</p>
+        </div>
+
+        <div class="producto">
+            <h3 class="nombre">Smartphone Pro</h3>
+            <p class="precio">Precio: 999€</p>
+            <p class="info">Teléfono con cámara de última generación.</p>
+        </div>
+
+        <div class="producto">
+            <h3 class="nombre">Auriculares Inalámbricos</h3>
+            <p class="precio">Precio: 199€</p>
+            <p class="info">Sonido envolvente y batería de larga duración.</p>
+        </div>
+
+        <div class="producto">
+            <h3 class="nombre">Monitor Ultra HD</h3>
+            <p class="precio">Precio: 299€</p>
+            <p class="info">Resolución 4K para una experiencia visual increíble.</p>
+        </div>
+
+    </div>
+
+    <button onclick="agregarProducto()">Agregar un producto al final</button>
+    <button onclick="reemplazarProducto()">Reemplazar el primer producto</button>
+    <button onclick="eliminarUltimoProducto()">Eliminar el último producto</button>
+    <button onclick="eliminarTodos()">Eliminar todos los productos</button>
+    <script src="js/script2.js"></script>
+
+    <script>
+        function agregarProducto() {
+            const catalogo = document.getElementById("catalogo");
+
+            const nuevoproducto = document.createElement("div");
+            nuevoProducto.setAttribute("class", "producto");
+
+            const nombre = document.createElement("h3");
+            const texto_nombre = document.createTextNode("Tablet X");
+            nombre.setAttribute("class", "nombre");
+            nombre.appendChild(texto);
+
+            const precio = document.createElement("p");
+            precio.setAttribute("class", "precio");
+            const texto = document.createTextNode("Tablet X");
+            precio.appendChild(texto);
+
+            const descripcion = document.createElement("p");
+            descripcion.setAttribute("class", "info");
+            descripcion.textContent = "Pantalla HD y batería de larga duración.";
+            descripcion.appendChild(texto);
+
+            nuevoProducto.appendChild(nombre);
+            nuevoProducto.appendChild(precio);
+            nuevoProducto.appendChild(descripcion);
+
+            catalogo.appendChild(nuevoProducto);
+        }
+
+        function reemplazarProducto() {
+            const nombre = document.createElement("h3");
+            const precio = document.createElement("p");
+            const info = document.createElement("p");
+
+            const padre = document.getElementById("producto");
+            padre.replaceChild(pnombre, precio, info);
+        }
+
+
+    </script>
+
+</body>
+</html>
